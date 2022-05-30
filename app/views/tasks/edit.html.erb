@@ -1,5 +1,5 @@
 <div class="container mt-3">
-  <h1>New Task</h1>
+  <h1>Edit Task</h1>
   <div class="form-group">
   <%= form_for(@task) do |f| %>
     <div class='group-form mt-3'>
@@ -10,11 +10,15 @@
       <%= f.label :details %>
       <%= f.text_area :details, class: 'form-control' %>
     </div>
+    <div class='group-form mt-3'>
+      <%= f.label :completed %>
+      <%= f.check_box  :completed, class: 'form-check' %>
+    </div>
     <div>
       <%= f.submit class: 'btn btn-primary mt-3'%>
     </div>
   <% end %>
   </div>
   <%= link_to "Back to list", tasks_path, :class => 'btn btn-secondary mt-3' %>
-
+</div>
 </div>
